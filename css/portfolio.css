@@ -3,6 +3,15 @@ html, body{
   height: 100%;
 }
 
+body{
+  font-family: 'Encode Sans', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Encode Sans Semi Condensed', sans-serif;
+  font-weight: 700;
+}
+
 
 /**Navigation*************************************************/
 
@@ -13,13 +22,13 @@ html, body{
 @media (min-width: 992px){
 
   body{
-    padding-left: 20rem;
+    padding-left: 15rem;
   }
 
    #sidebar{
      position: fixed;
      height: 100%;
-     width:20rem;
+     width:15rem;
      top:0;
      left:0;
      overflow: hidden;
@@ -49,9 +58,9 @@ html, body{
      margin:0 auto;
      margin-bottom: 1rem;
      display: block;
-     width: 60%;
+     width: 70%;
      border-radius: 100%;
-     border: 10px solid lightgrey;
+     border: 8px solid lightgrey;
    }
 
 }
@@ -59,18 +68,118 @@ html, body{
 
 /**Sections******************************************************/
 
+section.page{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 2rem;
+}
+
+
+/*#ABOUT**/
+#about h1{
+  font-size:4rem;
+  font-weight: 400;
+}
+
+#about h1 .fontColor{
+  color: Orange;
+}
+
+.aboutContent{
+  max-width: 1100px;
+}
+
+.aboutContent .icons{
+  width:100%;
+  margin-top: 5rem;
+}
+
+.aboutContent .icons a{
+  display: inline-block;
+  margin-right: 3rem;
+  width:1.5em;
+  line-height: 1.5em;
+  height: 1.5em;
+  font-size: 3rem;
+  text-align: center;
+  border-radius:50%;
+  color: white;
+
+}
+
+/*#Portfolio**/
+
+.portfolioImg{
+  max-width: 100%;
+}
+
+#portfolio.page{
+  padding:0;
+
+}
+
+.imgBox{
+  position:relative;
+  display:block;
+}
+
+.imgBox .imgBoxCaption {
+  position: absolute;
+  top:0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,.7);
+  text-align:center;
+  opacity: 0;
+  color: #fff;
+  transition: all 0.2s;
+}
+
+.imgBox .imgBoxCaption .imgBoxCaptionContent{
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  text-align: center;
+
+}
+
+.imgBox .imgBoxCaption .imgBoxCaptionContent h1{
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.imgBox:hover .imgBoxCaption {
+  opacity:1;
+}
 
 @media (min-width: 768px){
 
 
-.page{
-  height:100vh;
-  width:100%;
-  border-bottom: 1px solid lightgrey;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 1rem;
+  section.page{
+    padding: 8rem 5rem;
+  }
+
+  #about.page{
+    height:100vh;
+    padding: 3rem;
+  }
+
+
 }
+
+@media (min-width: 992px){
+
+  section.page{
+    height:100vh;
+    padding: 3rem;
+  }
+
+  #about h1{
+    font-size:6rem;
+  }
 
 }
