@@ -5,6 +5,7 @@ html, body{
 
 body{
   font-family: 'Encode Sans', sans-serif;
+  position: relative;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -18,6 +19,7 @@ h1,h2,h3,h4,h5,h6{
 #me{
   display: none;
 }
+
 
 @media (min-width: 992px){
 
@@ -54,11 +56,16 @@ h1,h2,h3,h4,h5,h6{
      text-align: center;
    }
 
+   #sidebar .navbar-collapse .navbar-nav .nav-item{
+     margin-bottom: 1rem;
+   }
+
+
    #me{
      margin:0 auto;
-     margin-bottom: 1rem;
+     margin-bottom: 2rem;
      display: block;
-     width: 70%;
+     width: 90%;
      border-radius: 100%;
      border: 8px solid lightgrey;
    }
@@ -72,27 +79,37 @@ section.page{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 4rem 2rem;
+  padding-top:7rem;
+  padding-bottom: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
+/*#ABOUT**************************************/
+.aboutContent{
+  max-width: 1100px;
+}
 
-/*#ABOUT**/
-#about h1{
+.aboutContent h1{
   font-size:4rem;
   font-weight: 400;
 }
 
-#about h1 .fontColor{
+.aboutContent h1 .fontColor{
   color: Orange;
 }
 
-.aboutContent{
-  max-width: 1100px;
+.aboutContent p{
+  opacity: .6;
 }
 
 .aboutContent .icons{
   width:100%;
   margin-top: 5rem;
+}
+
+.aboutContent .icons a:hover{
+  background-color: orange!important;
 }
 
 .aboutContent .icons a{
@@ -105,18 +122,55 @@ section.page{
   text-align: center;
   border-radius:50%;
   color: white;
+  
 
 }
 
-/*#Portfolio**/
+
+@media (max-width: 575.9px) {
+
+  .aboutContent .icons{
+    margin-top: 3.5rem;
+  }
+
+
+  .aboutContent .icons a{
+    width:1.5em;
+    height: 1.5em;
+    line-height: 1.5em;
+    font-size: 2rem;
+  }
+}
+
+
+@media (min-width: 768px){
+
+  #about.page{
+    min-height:100vh;
+    padding: 3rem;
+  }
+
+  #about h1{
+    font-size:6rem;
+  }
+
+}
+
+
+@media (min-width: 992px){
+
+
+
+}
+
+/***#PORTFOLIO************************************/
 
 .portfolioImg{
   max-width: 100%;
 }
 
 #portfolio.page{
-  padding:0;
-
+  padding: 0!important;
 }
 
 .imgBox{
@@ -158,28 +212,14 @@ section.page{
 
 @media (min-width: 768px){
 
+  #portfolio.page{
+    position: absolute;
+    min-height:100%;
 
-  section.page{
-    padding: 8rem 5rem;
   }
-
-  #about.page{
-    height:100vh;
-    padding: 3rem;
-  }
-
 
 }
 
 @media (min-width: 992px){
-
-  section.page{
-    height:100vh;
-    padding: 3rem;
-  }
-
-  #about h1{
-    font-size:6rem;
-  }
 
 }
